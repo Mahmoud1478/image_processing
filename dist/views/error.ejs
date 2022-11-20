@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        .container{
+            width: 90%;
+            margin: 0 auto;
+            min-height:100vh ;
+        }
+        .holder{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .holder div{
+            text-align: center;
+        }
+        .holder div h1{
+            font-size: 150px;
+            color: brown;
+        }
+        .holder div p{
+            font-size: 100px;
+            color: red;
+            text-transform: capitalize;
+        }
+        .holder div li{
+            font-size: 40px;
+            color: red;
+            text-transform: capitalize;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="holder">
+            <div>
+                <h1><%- code %> </h1>
+                <p><%- msg %> </p>
+                <ul>
+                    <% errors.forEach((item) =>{ %> 
+                       <li><%= item.value %></li>
+                    <% }); %> 
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
